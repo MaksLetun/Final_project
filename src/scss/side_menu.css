@@ -1,24 +1,47 @@
 .nav_container {
   display: none;
+}
+.nav_container .nav_container.mobile-open {
+  display: block;
   position: fixed;
-  left: 0px;
+  left: 0;
   top: 0;
   width: 320px;
   height: 100vh;
   background: white;
   transition: transform 0.3s ease;
-  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0 4px rgba(69, 79, 126, 0.02);
   overflow-y: scroll;
 }
-.nav_container::-webkit-scrollbar {
+.nav_container .nav_container.mobile-open::-webkit-scrollbar {
   display: none;
 }
+@media (min-width: 1120px) {
+  .nav_container {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    background: white;
+    transition: transform 0.3s ease;
+    overflow-y: scroll;
+  }
+  .nav_container::-webkit-scrollbar {
+    display: none;
+  }
+}
 
-.close_btn {
+.nav_btn_close {
   cursor: pointer;
   position: absolute;
   left: 24px;
   top: 24px;
+}
+@media (min-width: 1120px) {
+  .nav_btn_close {
+    display: none;
+  }
 }
 
 .Logo {
@@ -26,8 +49,14 @@
   left: 100px;
   top: 19px;
 }
+@media (min-width: 1120px) {
+  .Logo {
+    left: 24px;
+    top: 24px;
+  }
+}
 
-.search_btn {
+.nav_search_btn {
   position: absolute;
   left: 250px;
   top: 24px;

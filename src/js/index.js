@@ -1,36 +1,57 @@
-let hiddenTxt = document.querySelector('.hidden_txt ')
-let btn = document.querySelector('.svg_btn_expand')
-let txt = document.querySelector('.btn_text')
-let icn = document.querySelector('.expand_icon')
+let hiddenTxt_1 = document.querySelector('.hidden_txt ')
+let btn_1 = document.querySelector('.svg_btn_expand')
+let txt_1 = document.querySelector('.btn_text')
+let icn_1 = document.querySelector('.expand_icon')
 
-btn.addEventListener('click', function () {
-  if (txt.textContent === 'Читать далее') {
-    hiddenTxt.classList.remove('hidden_txt')
-    txt.textContent = 'Скрыть текст'
-    icn.classList.add('rotate')
+btn_1.addEventListener('click', function () {
+  if (txt_1.textContent === 'Читать далее') {
+    hiddenTxt_1.classList.remove('hidden_txt')
+    txt_1.textContent = 'Скрыть текст'
+    icn_1.classList.add('rotate')
   } else {
-    hiddenTxt.classList.add('hidden_txt')
-    txt.textContent = 'Читать далее'
-    icn.classList.remove('rotate')
+    hiddenTxt_1.classList.add('hidden_txt')
+    txt_1.textContent = 'Читать далее'
+    icn_1.classList.remove('rotate')
   }
 })
 
-let cardList = document.querySelector('.card-list')
-let hideButton = document.querySelector('.action__button')
-let textSpan = document.querySelector('.action__text')
-let icon = document.querySelector('.action__icon')
+let cardList_2 = document.querySelector('.card-list')
+let hideButton_2 = document.querySelector('.action__button')
+let textSpan_2 = document.querySelector('.action__text')
+let icon_2 = document.querySelector('.action__icon')
 
-hideButton.addEventListener('click', function () {
-  if (textSpan.textContent === 'Показать все') {
-    cardList.classList.remove('visible')
-    textSpan.textContent = 'Скрыть'
-    icon.classList.add('rotate')
+hideButton_2.addEventListener('click', function () {
+  if (textSpan_2.textContent === 'Показать все') {
+    cardList_2.classList.remove('visible')
+    textSpan_2.textContent = 'Скрыть'
+    icon_2.classList.add('rotate')
   } else {
-    cardList.classList.add('visible')
-    textSpan.textContent = 'Показать все'
-    icon.classList.remove('rotate')
+    cardList_2.classList.add('visible')
+    textSpan_2.textContent = 'Показать все'
+    icon_2.classList.remove('rotate')
   }
 })
+
+let cardList_3 = document.querySelector('.card-list_modul_3')
+let hideButton_3 = document.querySelector('.action__button_modul_3')
+let textSpan_3 = document.querySelector('.action__text_modul_3')
+let icon_3 = document.querySelector('.action__icon_modul_3')
+
+hideButton_3.addEventListener('click', function () {
+  if (textSpan_3.textContent === 'Показать все') {
+    cardList_3.classList.remove('visible_3')
+    textSpan_3.textContent = 'Скрыть'
+    icon_3.classList.add('rotate')
+  } else {
+    cardList_3.classList.add('visible_3')
+    textSpan_3.textContent = 'Показать все'
+    icon_3.classList.remove('rotate')
+  }
+})
+
+let menu = document.querySelector('.nav_container')
+let burgerBtn = document.querySelector('.svg_btn_burger')
+let closeBtn = document.querySelector('.nav_btn_close')
 
 const swiper = new Swiper('.swiper', {
   spaceBetween: -9,
