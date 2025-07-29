@@ -208,4 +208,8 @@ button:hover {
   letter-spacing: -0.2px;
   font-weight: 500;
   line-height: 24px;
+}
+
+.nav_footer {
+  align-items: end;
 }/*# sourceMappingURL=side_menu.css.map */
