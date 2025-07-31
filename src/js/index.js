@@ -64,10 +64,6 @@ CloseBurgerButton.addEventListener('click', function () {
   mainContent.classList.remove('blurred')
 })
 
-document.body.style.overflow = navContainer.classList.contains('active')
-  ? 'hidden'
-  : ''
-
 const swiper = new Swiper('.swiper', {
   spaceBetween: -9,
   slidesPerView: 'auto',
