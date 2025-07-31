@@ -39,19 +39,34 @@ let icon_3 = document.querySelector('.action__icon_modul_3')
 
 hideButton_3.addEventListener('click', function () {
   if (textSpan_3.textContent === 'Показать все') {
-    cardList_3.classList.remove('visible_3')
+    cardList_3.classList.add('visible_3')
     textSpan_3.textContent = 'Скрыть'
     icon_3.classList.add('rotate')
   } else {
-    cardList_3.classList.add('visible_3')
+    cardList_3.classList.remove('visible_3')
     textSpan_3.textContent = 'Показать все'
     icon_3.classList.remove('rotate')
   }
 })
 
-let menu = document.querySelector('.nav_container')
-let burgerBtn = document.querySelector('.svg_btn_burger')
-let closeBtn = document.querySelector('.nav_btn_close')
+let burgerButton = document.querySelector('.svg_btn_burger')
+let navContainer = document.querySelector('.nav_container')
+let CloseBurgerButton = document.querySelector('.nav_btn_close')
+let mainContent = document.querySelector('.main_content_site')
+
+burgerButton.addEventListener('click', function () {
+  navContainer.classList.toggle('active')
+  mainContent.classList.add('blurred')
+})
+
+CloseBurgerButton.addEventListener('click', function () {
+  navContainer.classList.remove('active')
+  mainContent.classList.remove('blurred')
+})
+
+document.body.style.overflow = navContainer.classList.contains('active')
+  ? 'hidden'
+  : ''
 
 const swiper = new Swiper('.swiper', {
   spaceBetween: -9,
@@ -59,7 +74,7 @@ const swiper = new Swiper('.swiper', {
   speed: 1000,
   loop: false,
   allowTouchMove: true,
-  autoHeight: true,
+  autoHeight: false,
   direction: 'horizontal',
   pagination: {
     el: '.swiper-pagination',

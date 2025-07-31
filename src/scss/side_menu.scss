@@ -1,44 +1,41 @@
 @import 'mixins.scss';
 
 .nav_container {
-  display: none;
-
-  .nav_container.mobile-open {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 320px;
-    height: 100vh;
-    background: white;
-    transition: transform 0.3s ease;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background: white;
+  transform: translateX(-100%); // скрываем через transform
+  transition: transform 0.5s ease;
+  overflow-x: scroll;
 
   @include laptop {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
+    transform: none;
     width: 320px;
-    height: 100vh;
-    background: white;
-    transition: transform 0.3s ease;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  }
+
+  &.active {
+    transform: translateX(0); // показываем
   }
 }
 
+.main_content_site.blurred {
+  filter: blur(25px);
+  position: fixed;
+}
+
 .nav_btn_close {
+  display: block;
   cursor: pointer;
   position: absolute;
   left: 24px;
   top: 24px;
+  background-color: rgba(255, 62, 121, 1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   @include laptop {
     display: none;
   }
