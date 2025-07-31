@@ -27,7 +27,7 @@
   flex-wrap: wrap;
   row-gap: 15px;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin-left: 32px;
   margin-bottom: 20px;
 }
@@ -98,13 +98,17 @@
 }
 
 .swiper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 24px;
   height: 81px;
-  background: linear-gradient(to left, #f8f8f8 0.01%, rgba(248, 248, 248, 0) 100%);
+  background: linear-gradient(
+    to left,
+    #f8f8f8 0.01%,
+    rgba(248, 248, 248, 0) 100%
+  );
   z-index: 2;
 }
 
@@ -125,4 +129,4 @@
   .swiper {
     visibility: hidden;
   }
-}/*# sourceMappingURL=modul_3.css.map */
+} /*# sourceMappingURL=modul_3.css.map */
