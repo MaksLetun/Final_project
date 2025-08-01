@@ -1,3 +1,5 @@
+//Код для первого блока текста//
+
 let hiddenTxt_1 = document.querySelector('.hidden_txt ')
 let btn_1 = document.querySelector('.svg_btn_expand')
 let txt_1 = document.querySelector('.btn_text')
@@ -14,6 +16,8 @@ btn_1.addEventListener('click', function () {
     icn_1.classList.remove('rotate')
   }
 })
+
+//Код для первого блока элементов//
 
 let cardList_2 = document.querySelector('.card-list')
 let hideButton_2 = document.querySelector('.action__button')
@@ -32,6 +36,8 @@ hideButton_2.addEventListener('click', function () {
   }
 })
 
+//Код для второго блока элементов//
+
 let cardList_3 = document.querySelector('.card-list_modul_3')
 let hideButton_3 = document.querySelector('.action__button_modul_3')
 let textSpan_3 = document.querySelector('.action__text_modul_3')
@@ -49,6 +55,8 @@ hideButton_3.addEventListener('click', function () {
   }
 })
 
+//Код для бокового меню слева//
+
 let burgerButton = document.querySelector('.svg_btn_burger')
 let navContainer = document.querySelector('.nav_container')
 let CloseBurgerButton = document.querySelector('.nav_btn_close')
@@ -64,6 +72,62 @@ CloseBurgerButton.addEventListener('click', function () {
   mainContent.classList.remove('blurred')
 })
 
+//Код для обратной связи справа//
+
+let chat_btn = document.querySelector('.svg_btn_chat')
+let chatBtn = document.querySelector('.chat_btn')
+let navCont = document.querySelector('#feedbackForm')
+let CloseFeedbackButton = document.querySelector('.feedback_btn_close')
+let mainCont1 = document.querySelector('.main_content_site')
+let mainCont2 = document.querySelector('.nav_container')
+
+chat_btn.addEventListener('click', function () {
+  navCont.classList.add('active')
+  mainCont1.classList.add('blurred')
+  mainCont2.classList.add('blurred')
+})
+
+chatBtn.addEventListener('click', function () {
+  navCont.classList.add('active')
+  mainCont1.classList.add('blurred')
+  mainCont2.classList.add('blurred')
+})
+
+CloseFeedbackButton.addEventListener('click', function () {
+  navCont.classList.remove('active')
+  mainCont1.classList.remove('blurred')
+  mainCont2.classList.remove('blurred')
+})
+
+//Код для заказа звонка справа//
+
+let call_Btn = document.querySelector('.svg_btn_call')
+let callBtn = document.querySelector('.call_btn')
+let callForm = document.querySelector('#callForm')
+let callBtnClose = document.querySelector('.call_btn_close')
+let mainCont3 = document.querySelector('.main_content_site')
+let mainCont4 = document.querySelector('.nav_container')
+
+call_Btn.addEventListener('click', function () {
+  callForm.classList.add('active')
+  mainCont1.classList.add('blurred')
+  mainCont2.classList.add('blurred')
+})
+
+callBtn.addEventListener('click', function () {
+  callForm.classList.add('active')
+  mainCont1.classList.add('blurred')
+  mainCont2.classList.add('blurred')
+})
+
+callBtnClose.addEventListener('click', function () {
+  callForm.classList.remove('active')
+  mainCont1.classList.remove('blurred')
+  mainCont2.classList.remove('blurred')
+})
+
+//Код для свайпера//
+
 const swiper = new Swiper('.swiper', {
   spaceBetween: -9,
   slidesPerView: 'auto',
@@ -77,4 +141,16 @@ const swiper = new Swiper('.swiper', {
     type: 'bullets',
     clickable: true
   }
+})
+
+document.getElementById('callForm').addEventListener('submit', function (e) {
+  e.preventDefault() // Отменяем стандартную отправку формы
+
+  const phone = document.getElementById('phone').value
+
+  // 2. Выводим в консоль
+  console.log('Номер телефона:', phone)
+
+  // 4. Очищаем поле ввода (опционально)
+  document.getElementById('phone').value = ''
 })

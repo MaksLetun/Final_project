@@ -1,0 +1,33 @@
+@import 'mixins.scss';
+
+#callForm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #ffff;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  overflow-x: scroll;
+
+  &.active {
+    transform: translateX(0); // показываем
+  }
+}
+
+.nav_container.blurred {
+  filter: blur(25px);
+  overflow: hidden;
+}
+
+.call_btn_close {
+  cursor: pointer;
+  background-color: rgba(255, 62, 121, 1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
