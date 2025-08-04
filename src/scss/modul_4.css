@@ -1,9 +1,31 @@
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
 
 .modul_4 {
   margin: 0;
+  border-top: 1px solid rgb(217, 255, 245);
 }
 @media (min-width: 1120px) {
   .modul_4 {
@@ -17,9 +39,11 @@
   color: #7e7e82;
   padding-top: 16px;
   padding-left: 32px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   white-space: nowrap;
   width: 100%;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .repair-table {
@@ -31,8 +55,9 @@
     flex-direction: column;
     gap: 8px;
     min-width: 720px;
-    max-width: 1056px;
+    max-width: 100%;
     margin: 0;
+    margin-right: 32px;
     margin-left: 32px;
     background-color: #ffffff;
   }
@@ -51,18 +76,39 @@
   background-color: #f8f8f8;
 }
 
+.table-header .col-service {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table-header .col-price {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table-header .col-time {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .col-service {
   flex: 3;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .col-price {
   flex: 1;
   text-align: center;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .col-time {
   flex: 1;
   text-align: center;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .col-action {
@@ -111,32 +157,51 @@
   margin-left: 32px;
   margin-top: 32px;
   margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .commercial_text {
+    width: 288px;
+    height: auto;
+  }
 }
 
 .comercial_btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  white-space: nowrap;
   margin-left: 32px;
   margin-bottom: 50px;
   padding: 0;
+  gap: 20px;
   width: 316px;
   height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .comercial_btn {
+    width: 250px;
+    height: 55px;
+    text-align: left;
+  }
+}
+
+.card__icon_commercial {
+  display: inline-flex;
+  margin-top: 13px;
+  margin-left: 10px;
 }
 
 .swiper-slide {
   position: relative;
   margin-left: 24px;
-  width: 240px;
-  height: 72px;
-  overflow: hidden;
+  height: 200px;
   z-index: 1;
+  overflow: visible;
 }
 
 .swiper::after {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   width: 24px;
@@ -155,27 +220,43 @@
   height: 12px;
 }
 
-.swiper {
-  height: 115px;
+.modul_4 .swiper {
+  height: 210px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
-  .swiper {
-    visibility: hidden;
+  .modul_4 .swiper {
+    display: none;
   }
 }
 
 .table_slider {
-  width: 260px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 228px;
+  height: 168px;
   background-color: #ffffff;
-  border: 1px solid #eaeaea;
   border-radius: 6px;
+  padding-left: 15px;
+  font-size: 14px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.table_slider_title {
+  color: rgb(126, 126, 130);
+}
+
+.table_slider_name {
+  margin-bottom: 15px;
+  margin-right: 10px;
 }
 
 .col-action_btn_slider {
   position: absolute;
-  left: 130px;
-  top: 150px;
+  left: 105px;
+  top: 130px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,7 +1,11 @@
 @import 'mixins.scss';
+@import 'fonts.scss';
+@import 'variables.scss';
 
 .modul_2 {
   margin: 0;
+  border-top: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
   @include laptop {
     margin-left: 320px;
   }
@@ -23,6 +27,8 @@ body {
   padding-top: 16px;
   padding-left: 32px;
   margin-bottom: 25px;
+  font-size: $text-base;
+  font-weight: $font-regular;
 }
 
 .card-list {
@@ -40,7 +46,7 @@ body {
 }
 
 .card-list__logo {
-  width: 224px;
+  width: 240px;
   height: 72px;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
@@ -102,6 +108,8 @@ body {
     .action__text {
       width: 400px;
       white-space: nowrap;
+      font-size: $text-base;
+      font-weight: $font-medium;
     }
   }
 }
@@ -109,10 +117,8 @@ body {
 .swiper-slide {
   position: relative;
   margin-left: 24px;
-  width: 240px;
   height: 72px;
-  overflow: hidden;
-  z-index: 1;
+  overflow: visible;
 }
 
 .swiper::after {
@@ -129,6 +135,7 @@ body {
   );
   z-index: 2;
 }
+
 .swiper-pagination {
   position: relative;
 }
@@ -143,9 +150,10 @@ body {
   height: 12px;
 }
 
-.swiper {
+.modul_2 .swiper {
   height: 115px;
+
   @include tablet {
-    visibility: hidden;
+    display: none;
   }
 }

@@ -1,9 +1,32 @@
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
 
 .modul_3 {
   margin: 0;
+  border-top: 1px solid rgb(217, 255, 245);
+  border-bottom: 1px solid rgb(217, 255, 245);
 }
 @media (min-width: 1120px) {
   .modul_3 {
@@ -17,9 +40,11 @@
   color: #7e7e82;
   padding-top: 16px;
   padding-left: 32px;
-  margin-bottom: 25px;
-  white-space: nowrap;
+  padding-bottom: 25px;
+  white-space: wrap;
   width: 100%;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .card-list_modul_3 {
@@ -30,9 +55,15 @@
        column-gap: 20px;
   margin-left: 32px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .card-list_modul_3.visible_3 {
   display: flex;
+}
+@media (max-width: 767px) {
+  .card-list_modul_3.visible_3 {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .card-list_modul_3 {
@@ -74,6 +105,8 @@
   position: absolute;
   left: 15px;
   top: 15px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .card-logo_modul_3 .card-list_modul_3__button {
   position: absolute;
@@ -87,13 +120,23 @@
   flex-direction: row;
   white-space: nowrap;
 }
+@media (max-width: 767px) {
+  .action_modul_3 {
+    display: none;
+  }
+}
+
+.action__text_modul_3 {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
 
 .swiper-slide {
   position: relative;
   margin-left: 24px;
-  width: 240px;
-  height: 72px;
-  overflow: hidden;
+  height: 160px;
+  overflow: visible;
   z-index: 1;
 }
 
@@ -103,7 +146,7 @@
   top: 0;
   right: 0;
   width: 24px;
-  height: 81px;
+  height: 160px;
   background: linear-gradient(to left, #f8f8f8 0.01%, rgba(248, 248, 248, 0) 100%);
   z-index: 2;
 }
@@ -118,11 +161,12 @@
   height: 12px;
 }
 
-.swiper {
-  height: 115px;
+.modul_3 .swiper {
+  margin-top: 20px;
+  height: 200px;
 }
 @media (min-width: 768px) {
-  .swiper {
-    visibility: hidden;
+  .modul_3 .swiper {
+    display: none;
   }
 }/*# sourceMappingURL=modul_3.css.map */

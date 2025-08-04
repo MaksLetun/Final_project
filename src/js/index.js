@@ -129,28 +129,16 @@ callBtnClose.addEventListener('click', function () {
 //Код для свайпера//
 
 const swiper = new Swiper('.swiper', {
-  spaceBetween: -9,
-  slidesPerView: 'auto',
+  spaceBetween: 170,
+  slidesPerView: 2,
   speed: 1000,
   loop: false,
   allowTouchMove: true,
-  autoHeight: false,
+  autoHeight: true,
   direction: 'horizontal',
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
     clickable: true
   }
-})
-
-document.getElementById('callForm').addEventListener('submit', function (e) {
-  e.preventDefault() // Отменяем стандартную отправку формы
-
-  const phone = document.getElementById('phone').value
-
-  // 2. Выводим в консоль
-  console.log('Номер телефона:', phone)
-
-  // 4. Очищаем поле ввода (опционально)
-  document.getElementById('phone').value = ''
 })

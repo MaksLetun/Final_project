@@ -1,4 +1,7 @@
 @import 'mixins.scss';
+@import 'fonts.scss';
+@import 'variables';
+
 
 .nav_container {
   position: fixed;
@@ -9,7 +12,11 @@
   background: white;
   transform: translateX(-100%); // скрываем через transform
   transition: transform 0.5s ease;
-  overflow-x: scroll;
+
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include laptop {
     transform: none;
@@ -18,11 +25,15 @@
 
   &.active {
     transform: translateX(0); // показываем
+    overflow-y: auto;
+    overflow-x: hidden;
+        z-index: 1;
+
   }
 }
 
 .main_content_site.blurred {
-  filter: blur(25px);
+  filter: blur(10px);
   position: fixed;
 }
 
@@ -85,8 +96,8 @@
   position: relative;
   transition: color 0.3s ease;
   margin-left: 24px;
-  font-weight: 500;
-  font-size: 16px;
+  font-size: $text-base;
+  font-weight: $font-medium;
 }
 
 .nav_item-feature a {
@@ -149,6 +160,7 @@ button:hover {
   margin-top: 16px;
   margin-bottom: 12px;
   height: 24px;
+  
 }
 
 .phone_number {
@@ -161,13 +173,15 @@ button:hover {
   letter-spacing: -0.2px;
   font-weight: 500;
   line-height: 24px;
+    font-size: $text-base;
+  font-weight: $font-medium;
 }
 
 .phone_txt {
-  font-size: 24px;
   line-height: 32px;
   letter-spacing: -0, 6px;
-  font-weight: 700;
+    font-size: $text-xl;
+  font-weight: $font-bold;
 }
 
 .phone_txt a,
@@ -182,6 +196,8 @@ button:hover {
   margin-left: 22px;
   margin-top: 40px;
   margin-bottom: 56px;
+    font-size: $text-base;
+  font-weight: $font-medium;
 }
 
 .ru_btn:hover {
@@ -206,5 +222,7 @@ button:hover {
 }
 
 .nav_footer {
+  position: absolute;
+  top: 700px;
   align-items: end;
 }

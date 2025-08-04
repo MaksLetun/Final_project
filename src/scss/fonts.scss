@@ -1,0 +1,13 @@
+@mixin font-face($name, $path, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('#{$path}') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face('TTLakes', '/src/fonts/TTLakes-Regular.woff', 400);
+@include font-face('TTLakes', '/src/fonts/TTLakes-Medium.woff', 500);
+@include font-face('TTLakes', '/src/fonts/TTLakes-Bold.woff', 700);

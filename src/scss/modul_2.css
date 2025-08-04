@@ -1,5 +1,28 @@
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .modul_2 {
   margin: 0;
+  border-top: 1px solid rgb(217, 255, 245);
+  border-bottom: 1px solid rgb(217, 255, 245);
 }
 @media (min-width: 1120px) {
   .modul_2 {
@@ -23,6 +46,8 @@ body {
   padding-top: 16px;
   padding-left: 32px;
   margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .card-list {
@@ -42,7 +67,7 @@ body {
 }
 
 .card-list__logo {
-  width: 224px;
+  width: 240px;
   height: 72px;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
@@ -107,16 +132,16 @@ body {
   .action .action__text {
     width: 400px;
     white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 
 .swiper-slide {
   position: relative;
   margin-left: 24px;
-  width: 240px;
   height: 72px;
-  overflow: hidden;
-  z-index: 1;
+  overflow: visible;
 }
 
 .swiper::after {
@@ -145,11 +170,11 @@ body {
   height: 12px;
 }
 
-.swiper {
+.modul_2 .swiper {
   height: 115px;
 }
 @media (min-width: 768px) {
-  .swiper {
-    visibility: hidden;
+  .modul_2 .swiper {
+    display: none;
   }
 }/*# sourceMappingURL=modul_2.css.map */
